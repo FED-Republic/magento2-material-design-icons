@@ -32,5 +32,5 @@
  There "star" is name of icon. You can find all names and connected on Google page:
  https://design.google.com/icons/
 
- Load fonts from this directory. This path is default for Magento.
+ Use @icon-font-path: for load fonts. This variable includes path default for Magento.
  It is relative path from YourTheme/web/css folder.
