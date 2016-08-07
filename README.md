@@ -2,9 +2,10 @@
  Google Material design icons adaptation for Magento 2
  Version: 0.01
 
- Created by Victor Slivinsky 07.08.2016
+ Created by Victor Slivinsky
+ 07.08.2016
 
- This lib extend default Google Material icons lib.
+ This lib extend default Google Material icons lib. Just copy web folder to your Magento 2 Theme folder and add to imports "_material-design-icons.less" file.
  I have implemented 2 extra variants of  usage Material design icons:
 
  1 - Individual usage. Allows set icons as ":before" element for any page element.
