@@ -1,0 +1,85 @@
+//
+// Google Material design icons adaptation for Magento 2
+// Version: 0.01
+// Created by Victor Slivinsky 07.08.2016
+//
+// This lib extend default Google Material icons lib.
+// I have implemented 2 extra variants of  usage Material design icons:
+//
+// 1 - Individual usage. Allows set icons as ":before" element for any page element.
+//     You don't need to modify template files. Use this structure
+//
+// .any_class_name:before {
+//    @extend .material-icons;
+//    content: 'label';
+//  }
+//
+//  For IE9 or below
+//
+// .any_class_name:before {
+//    @extend .material-icons;
+//    content: '\e84d';
+//  }
+//
+// 2 - BEM Model. Based on 2 classes:
+// ".material-icons" -as element class and
+// ".material-star"  -as class modificator
+// create an inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="material-icons material-star"></span> Star</a>
+// There "star" is name of icon. You can find all names and connected on Google page:
+// https://design.google.com/icons/
+
+// Load fonts from this directory. This path is default for Magento.
+// It is relative path from YourTheme/web/css folder.
+
+@icon-font-path:  "../fonts/material-design-icons/";
+
+// Import the fonts
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@{icon-font-path}MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url('@{icon-font-path}MaterialIcons-Regular.woff2') format('woff2'),
+  url('@{icon-font-path}MaterialIcons-Regular.woff') format('woff'),
+  url('@{icon-font-path}MaterialIcons-Regular.ttf') format('truetype');
+}
+
+//Base class
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+
+// Individual icons
+
+//Import lib of modificators.
+//You can find all modificators names and connected images on Google page:
+// https://design.google.com/icons/
+
+@import "_glyphicons.less";
