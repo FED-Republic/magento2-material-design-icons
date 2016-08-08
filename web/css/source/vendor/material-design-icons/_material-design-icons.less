@@ -3,22 +3,16 @@
 // Version: 0.01
 // Created by Victor Slivinsky 07.08.2016
 //
-// This lib extend default Google Material icons lib. Just copy web folder to your Magento 2 Theme folder and add to imports "_material-design-icons.less" file.
-// I have implemented 2 extra variants of  usage Material design icons:
+// This lib extend default Google Material icons lib. Just copy web folder to your Magento 2 Theme folder
+// and import "_material-design-icons.less" file for example to "_sources.less".
+// I have implemented 2 extra variants of usage Material design icons:
 //
 // 1 - Individual usage. Allows set icons as ":before" element for any page element.
 //     You don't need to modify template files. Use this structure
 //
 // .any_class_name:before {
-//    @extend .material-icons;
-//    content: 'label';
-//  }
-//
-//  For IE9 or below
-//
-// .any_class_name:before {
-//    @extend .material-icons;
-//    content: '\e84d';
+//      &:extend(.material-icons);
+//      content: 'label'; /* Use numeric character for ie10 and earlier "\E87C" */
 //  }
 //
 // 2 - BEM Model. Based on 2 classes:
@@ -79,13 +73,13 @@
 // Individual icons
 // Example:
 // .any_class_name:before {
-//    @extend .material-icons;
-//    content: '\e84d';
+//      &:extend(.material-icons);
+//      content: 'label'; /* Use numeric character for ie10 and earlier "\E87C" */
 //  }
 
 
 
-//Import lib of modificators.
+//Import lib of modificators. I recommend to use it only if you need a lot of google icons or you cant predict all needed variants.
 //You can find all modificators names and connected images on Google page:
 // https://design.google.com/icons/
 
